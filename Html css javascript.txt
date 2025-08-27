@@ -1,0 +1,216 @@
+1. ¿Qué es HTML y cuál es su función en la web? 
+R//: 	HTML significa HyperText Markup Language y es el lenguaje estándar que se usa para estructurar el contenido de las paginas web.
+
+
+2. ¿Qué es una etiqueta HTML y menciona las etiquetas más comunes? 
+R//: 	Una instrucción que se usa dentro del código HTML para definir y estructurar elementos de una página web.
+	Las etiquetas siempre van entre corchetes angulares < >
+
+	Atributos globales (funcionan en casi todas las etiquetas)
+
+	id → Identificador único de un elemento.
+	class → Nombre de clase, usado para aplicar estilos con CSS o seleccionar elementos con JavaScript.
+	style → Aplica estilos en línea al elemento.
+	title → Texto que aparece como tooltip al pasar el mouse.
+
+	En imágenes <img>
+	src → Ruta de la imagen.
+	alt → Texto alternativo (accesibilidad si no carga la imagen).
+	width / height → Dimensiones de la imagen.
+
+	En enlaces <a>
+	href → Dirección URL del enlace.
+
+
+3. ¿Qué es un atributo de una etiqueta HTML y menciona los más comunes? 
+R//:	Un atributo es información adicional que se agrega a una etiqueta HTML para modificar su comportamiento o apariencia.
+	Se colocan dentro de la etiqueta de apertura, en la forma:
+	<a href="https://www.google.com">Ir a Google</a>
+	a → etiqueta de enlace.
+	href → atributo.
+	"https://www.google.com" → valor del atributo (el destino del enlace).
+
+
+4. ¿Qué es CSS y cómo se utiliza para el diseño web? 
+R//:	Cascading Style Sheets (Hojas de Estilo en Cascada).
+	Es el lenguaje de estilos usado para definir cómo se ven los elementos HTML en una página web: colores, tamaños, márgenes, posiciones, fuentes, animaciones, etc.
+
+
+5. ¿Qué es una propiedad en CSS y menciona las propiedades más comunes? 
+R//:	Es una característica que se puede modificar de un elemento HTML para definir su apariencia o diseño.
+	Cada propiedad tiene un valor que indica cómo se aplicará.
+
+	De texto y tipografía
+	color → color del texto.
+	font-size → tamaño de la fuente.
+	font-family → tipo de letra.
+	text-align → alineación (left, center, right, justify).
+
+	De fondo
+	background-color → color de fondo.
+	background-image → imagen de fondo.
+
+	De caja (Box Model)
+	width / height → ancho y alto.
+	margin → espacio exterior del elemento.
+	padding → espacio interior entre el borde y el contenido.
+	border → borde alrededor del elemento.
+
+
+6. ¿Qué es un selector en CSS y cuales tipos existen? 
+R//: 	Es la parte de CSS que indica a qué elementos HTML se aplicarán los estilos.
+	El selector selecciona el elemento, y las propiedades cambian su apariencia.
+
+	Tipos de selectores en CSS
+	Básicos
+	Selector universal: * → selecciona todos los elementos.
+	Selector de tipo: p, h1, div → selecciona por nombre de etiqueta.
+	Selector de clase: .clase → selecciona elementos con el atributo class.
+	Selector de ID: #id → selecciona un elemento único con el atributo id.
+
+	Selectores de grupo
+
+	Como los básicos, pero permiten aplicar estilos a varios selectores a la vez separándolos con comas.
+	h1, h2, p { color: green; }
+
+
+7. ¿Qué es JavaScript y cómo añade la interactividad a las páginas web? 
+R//:	Lenguaje de programación que se ejecuta principalmente en el navegador web y permite añadir interactividad, dinamismo y lógica a las páginas web.
+	
+	¿Cómo añade interactividad JavaScript en la web?
+	Responder a eventos del usuario
+	Ejemplo: clics, movimientos de mouse, escritura en formularios, scroll.	
+	<button onclick="alert('¡Hola!')">Haz clic</button>
+	Cuando haces clic, JS ejecuta una acción.
+
+
+8. ¿Cuáles son los tipos de datos primitivos en Javascript? 
+R//:	string		"Hola", 'Mundo'		Texto
+	number		42, 3.14, Infinity	Números
+	boolean		true, false		Lógico
+	undefined	let x; → undefined	Variable sin valor asignado
+	null		let y = null;		Valor nulo intencional
+	symbol		Symbol("id")		Identificador único
+	bigint		123456789n		Enteros grandes
+
+
+9. ¿Cómo funcionan las estructuras de control de flujo como if, else, switch y bucles en 
+Javascript? 
+R//:	
+if
+let edad = 18;
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+}
+
+if...else
+let hora = 10;
+
+if (hora < 12) {
+  console.log("Buenos días");
+} else {
+  console.log("Buenas tardes");
+}
+
+
+if...else if...else
+let nota = 85;
+
+if (nota >= 90) {
+  console.log("Excelente");
+} else if (nota >= 70) {
+  console.log("Aprobado");
+} else {
+  console.log("Reprobado");
+}
+
+switch
+let dia = 3;
+
+switch (dia) {
+  case 1:
+    console.log("Lunes");
+    break;
+  case 2:
+    console.log("Martes");
+    break;
+  case 3:
+    console.log("Miércoles");
+    break;
+  default:
+    console.log("Otro día");
+}
+
+for
+for (let i = 1; i <= 5; i++) {
+  console.log("Número:", i);
+}
+
+while
+let i = 1;
+while (i <= 5) {
+  console.log("Contador:", i);
+  i++;
+}
+
+do...while
+let j = 6;
+do {
+  console.log("Número:", j);
+  j++;
+} while (j <= 5);
+
+for...of
+let frutas = ["Manzana", "Banana", "Pera"];
+
+for (let fruta of frutas) {
+  console.log(fruta);
+}
+
+for...in
+let persona = { nombre: "Ana", edad: 25 };
+
+for (let clave in persona) {
+  console.log(clave + ": " + persona[clave]);
+}
+
+
+10. ¿Por qué es importante usar nombres significativos para variables y métodos? 
+R//: Para legibilidad del código, su mantenimiento(Expansión y corrección de errores), su entendimiento(Unas variables y funciones claras permiten su entendimiento mucho mas rapido), lo mismo aplica para el trabajo en equipo, y que nombres simples como info puede entrar en conflicto con otras dependencias de la aplicación.
+	
+11. ¿Qué es una variable de entorno y por qué son importantes para Javascript o la 
+programación en general? 
+R//: 	Una variable de entorno es un valor definido en el sistema operativo o en la configuración de un programa, que sirve para almacenar información que puede ser usada por aplicaciones.
+
+¿Por qué son importantes?
+
+Seguridad: Evitas poner contraseñas, claves API o datos sensibles directamente en el código.
+
+Portabilidad: Puedes tener configuraciones distintas para desarrollo, pruebas y producción sin cambiar el código.
+
+Ejemplo: en desarrollo tu base de datos es localhost, pero en producción es un servidor remoto.
+
+Flexibilidad: Permiten ajustar parámetros sin recompilar o modificar el código fuente.
+
+Buenas prácticas de programación: Separar la lógica del programa de la configuración.
+
+
+12. ¿Qué son las herramientas de desarrollo de Chrome y cómo se accede a ellas? 
+R//:	 Permite editar páginas sobre la marcha y diagnosticar problemas con rapidez, lo que te ayuda a crear mejores sitios web en menos tiempo.
+Boton F12.
+
+
+13. ¿Qué se puede hacer en el panel "Elements" de las herramientas de desarrollo? 
+R//:	Permite inspeccionar y modificar en tiempo real el HTML y CSS de una página web. Algunas cosas como:
+Ver la jerarquía de elementos (div, p, h1, etc.), saber qué etiquetas contienen a otras, revisar atributos (id, class, src, etc.), cambiar el contenido de un texto, editar o añadir clases, atributos o etiquetas nuevas, ver todas las reglas CSS aplicadas a un elemento, activar/desactivar reglas con checkboxes., probar cambios en colores, tamaños, márgenes, etc.
+
+
+14. ¿Cómo se utiliza el panel "Console" de las herramientas de desarrollo y para qué es 
+útil? 
+R//:	Es una sección donde puedes ver mensajes del sistema, errores, advertencias y resultados de tu propio código JavaScript. También te permite escribir y ejecutar comandos en tiempo real.
+Se entra con el botón F12 dentro del navegador, y después en el apartado console.
+
+15. ¿Qué información se puede obtener del panel "Network" y por qué es importante?
+R//	Permite ver y analizar todas las peticiones de red que realiza una página web como:
+Archivos cargados: HTML, CSS, JavaScript, imágenes, fuentes, etc.
+Solicitudes HTTP/HTTPS: tipo de petición (GET, POST, PUT, DELETE…), cabeceras enviadas y recibidas, tiempo de carga: cuánto tarda cada recurso en descargarse, tamaño de los archivos: peso de imágenes, scripts o documentos.
